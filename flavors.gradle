@@ -1,0 +1,55 @@
+apply from: "${rootProject.projectDir}/versions.gradle"
+
+ext.flavorConfig = {
+
+    flavorDimensions "environment"
+
+    productFlavors {
+        mock {
+            dimension "environment"
+            versionName getBuildName()+"-mock"
+            applicationIdSuffix ".mock"
+            resValue "string", "app_name", "Weather App(MOCK)"
+            buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://node-postgres-registration.herokuapp.com/"'
+            buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
+            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+        }
+
+        development {
+            dimension "environment"
+            versionName getBuildName()+"-dev"
+            applicationIdSuffix ".dev"
+            resValue "string", "app_name", "Weather App(DEV)"
+            buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
+            buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
+            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+        }
+
+        staging {
+            dimension "environment"
+            versionName getBuildName()+"-stage"
+            applicationIdSuffix ".stage"
+            resValue "string", "app_name", "Weather App(STAGE)"
+            //for testing only
+            buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
+            buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
+            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+        }
+
+        production {
+            dimension "environment"
+            resValue "string", "app_name", "Weather App"
+            //for testing only
+            buildConfigField 'String', 'DATABASE_NAME', '"scaffold_project_database"'
+            buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
+            buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
+            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+        }
+
+    }
+
+}
+
