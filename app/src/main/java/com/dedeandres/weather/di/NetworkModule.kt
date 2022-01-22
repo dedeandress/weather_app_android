@@ -1,6 +1,7 @@
 package com.dedeandres.weather.di
 
 import android.content.Context
+import com.dedeandres.weather.BuildConfig
 import com.dedeandres.weather.common.*
 import com.dedeandres.weather.common.sharedpref.SharedPrefs
 import com.google.gson.Gson
@@ -52,6 +53,6 @@ class NetworkModule {
 
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
-        return getRetrofit(okHttpClient, "http://api.weatherapi.com/v1")
+        return getRetrofit(okHttpClient, BuildConfig.BASE_URL)
     }
 }

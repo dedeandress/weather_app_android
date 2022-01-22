@@ -13,7 +13,7 @@ ext.flavorConfig = {
             buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
             buildConfigField 'String', 'API_BASE_URL', '"https://node-postgres-registration.herokuapp.com/"'
             buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
-            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.weatherapi.com/"'
         }
 
         development {
@@ -24,7 +24,7 @@ ext.flavorConfig = {
             buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
             buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
             buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
-            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.weatherapi.com/"'
         }
 
         staging {
@@ -36,7 +36,7 @@ ext.flavorConfig = {
             buildConfigField 'String', 'DATABASE_NAME', '"weather_app_database"'
             buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
             buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
-            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.weatherapi.com/"'
         }
 
         production {
@@ -46,7 +46,7 @@ ext.flavorConfig = {
             buildConfigField 'String', 'DATABASE_NAME', '"scaffold_project_database"'
             buildConfigField 'String', 'API_BASE_URL', '"https://go-sample-login-register.herokuapp.com"'
             buildConfigField 'String', 'API_KEY', '"35333926d478458b83f124759211412"'
-            buildConfigField 'String', 'BASE_URL', '"http://api.weatherapi.com/v1/"'
+            buildConfigField 'String', 'BASE_URL', '"https://api.weatherapi.com/"'
         }
 
     }
