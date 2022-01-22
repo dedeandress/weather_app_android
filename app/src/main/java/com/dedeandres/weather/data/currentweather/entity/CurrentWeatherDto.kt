@@ -44,7 +44,8 @@ fun CurrentWeatherDto.mapToModel(): CurrentWeatherModel {
         tempF = this.current.tempF.toString(),
         tempLastUpdated = this.current.lastUpdated,
         conditionText = this.current.condition.text,
-        conditionIconPath = this.current.condition.iconPath
+        conditionIconPath = this.current.condition.iconPath,
+        conditionCode = this.current.condition.code
     )
 }
 

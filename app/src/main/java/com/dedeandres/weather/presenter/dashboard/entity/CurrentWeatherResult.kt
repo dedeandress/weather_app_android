@@ -1,11 +1,12 @@
 package com.dedeandres.weather.presenter.dashboard.entity
 
 data class CurrentWeatherResult(
-    private val locationName: String,
-    private val locationCountry: String,
-    private val tempC: String,
-    private val tempF: String,
-    private val tempLastUpdated: String,
-    private val conditionText: String,
-    private val conditionIconPath: String,
+    val locationName: String,
+    val locationCountry: String,
+    val tempC: String,
+    val tempF: String,
+    val tempLastUpdated: String,
+    val conditionText: String,
+    val conditionIconPath: String,
+    val coditionCode: Int
 )

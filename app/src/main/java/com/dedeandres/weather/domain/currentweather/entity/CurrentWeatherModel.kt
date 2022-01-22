@@ -10,9 +10,10 @@ data class CurrentWeatherModel(
     val tempLastUpdated: String,
     val conditionText: String,
     val conditionIconPath: String,
+    val conditionCode: Int
 )
 
 fun CurrentWeatherModel.mapToResult(): CurrentWeatherResult = CurrentWeatherResult(
-    locationName, locationCountry, tempC, tempF, tempLastUpdated, conditionText, conditionIconPath
+    locationName, locationCountry, tempC, tempF, tempLastUpdated, conditionText, conditionIconPath, conditionCode
 )
 
