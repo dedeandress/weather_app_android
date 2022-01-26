@@ -40,8 +40,8 @@ object Weather {
             1222 -> R.drawable.ic_snow
             1225 -> R.drawable.ic_snow
             1237 -> R.drawable.ic_snow
-            1240 -> R.drawable.ic_snow
-            1243 -> R.drawable.ic_snow
+            1240 -> R.drawable.ic_rain
+            1243 -> R.drawable.ic_rain
             1246 -> R.drawable.ic_rain
             1249 -> R.drawable.ic_rain
             1252 -> R.drawable.ic_rain
@@ -59,4 +59,10 @@ object Weather {
             else -> R.drawable.ic_rainbow
         }
     }
+
+    fun windFomatKmh(windSpeed: String): String = "$windSpeed km/h"
+    fun windFomatMph(windSpeed: String): String = "$windSpeed km/h"
+
+    fun feelsLikeFormatC(feelsLike: String): String = "$feelsLike°C"
+    fun feelsLikeFormatF(feelsLike: String): String = "$feelsLike°F"
 }

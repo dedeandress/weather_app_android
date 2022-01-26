@@ -71,4 +71,9 @@ dependencies {
     implementation "androidx.hilt:hilt-navigation-fragment:$androidx_hilt_version"
 
     implementation "com.jakewharton.timber:timber:5.0.0"
+
+    // Room components
+    implementation "androidx.room:room-ktx:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    androidTestImplementation "androidx.room:room-testing:$room_version"
 }

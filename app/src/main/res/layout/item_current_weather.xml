@@ -1,90 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/dp_8"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/iv_weather_icon"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="@dimen/dp_8"
-        android:layout_marginBottom="@dimen/dp_8"
-        android:layout_marginStart="@dimen/dp_8"
-        android:layout_width="@dimen/dp_50"
-        android:src="@drawable/ic_rain"
-        android:layout_height="@dimen/dp_50"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8">
 
+        <ImageView
+            android:id="@+id/iv_weather_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_width="@dimen/dp_50"
+            android:src="@drawable/ic_rain"
+            android:layout_height="@dimen/dp_50"/>
 
-    <TextView
-        android:id="@+id/tv_city"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintStart_toEndOf="@id/iv_weather_icon"
-        android:layout_marginTop="@dimen/dp_8"
-        android:layout_marginStart="@dimen/dp_8"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Beijing"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-    <LinearLayout
-        android:id="@+id/ll_feels_like"
-        android:layout_marginTop="@dimen/dp_2"
-        android:layout_marginStart="@dimen/dp_8"
-        app:layout_constraintTop_toBottomOf="@id/tv_city"
-        app:layout_constraintStart_toEndOf="@id/iv_weather_icon"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
         <TextView
-            android:text="Feels Like  "
-            android:textSize="@dimen/dp_8"
+            android:id="@+id/tv_city"
+            android:textSize="@dimen/sp_24"
+            app:layout_constraintStart_toEndOf="@id/iv_weather_icon"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_8"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Beijing"
+            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
+        <LinearLayout
+            android:id="@+id/ll_feels_like"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginStart="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@id/tv_city"
+            app:layout_constraintStart_toEndOf="@id/iv_weather_icon"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Feels Like  "
+                android:textSize="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_feels_like"
+                android:text="32.6°C"
+                android:textSize="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_wind"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_marginStart="@dimen/dp_8"
+            app:layout_constraintTop_toBottomOf="@id/tv_city"
+            app:layout_constraintStart_toEndOf="@id/ll_feels_like"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Wind  "
+                android:textSize="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tv_wind"
+                android:text="13.0 km/h"
+                android:textSize="@dimen/dp_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
         <TextView
-            android:text="32.6°C"
-            android:textSize="@dimen/dp_8"
+            android:id="@+id/tv_temp"
+            android:textStyle="bold"
+            android:text="32°C"
+            android:textSize="@dimen/sp_32"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/ll_wind"
-        android:layout_marginTop="@dimen/dp_2"
-        android:layout_marginStart="@dimen/dp_8"
-        app:layout_constraintTop_toBottomOf="@id/tv_city"
-        app:layout_constraintStart_toEndOf="@id/ll_feels_like"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:text="Wind  "
-            android:textSize="@dimen/dp_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-
-        <TextView
-            android:text="13.0 km/h"
-            android:textSize="@dimen/dp_8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
-
-    <TextView
-        android:textStyle="bold"
-        android:text="32°C"
-        android:textSize="@dimen/sp_32"
-        android:layout_marginEnd="@dimen/dp_16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
