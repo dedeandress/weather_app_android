@@ -3,4 +3,6 @@
     <string name="url_freepik">https://www.freepik.com/vectors/nature"Nature vector created by freepik - www.freepik.com</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_search">Find the area or city that you want to know the weather info at this time</string>
+    <string name="title_search">Pick location</string>
 </resources>

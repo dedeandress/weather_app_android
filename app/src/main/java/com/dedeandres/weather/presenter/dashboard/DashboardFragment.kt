@@ -5,6 +5,7 @@ import com.dedeandres.weather.common.*
 import com.dedeandres.weather.common.base.BaseViewModelFragment
 import com.dedeandres.weather.databinding.FragmentDashboardBinding
 import com.dedeandres.weather.presenter.dashboard.adapter.FavoriteCityListAdapter
+import com.dedeandres.weather.presenter.dashboard.bottomsheet.SearchLocationBottomSheet
 import com.dedeandres.weather.presenter.dashboard.entity.CityWeatherResult
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
@@ -13,6 +14,9 @@ import timber.log.Timber
 class DashboardFragment : BaseViewModelFragment<FragmentDashboardBinding, DashboardViewModel>(), FavoriteCityListAdapter.OnAddMoreCityClickListener {
 
     private lateinit var favoriteCityListAdapter: FavoriteCityListAdapter
+    private val searchLocationBottomSheet by lazy {
+        SearchLocationBottomSheet()
+    }
 
     override val viewModel: DashboardViewModel by viewModels()
 
@@ -83,6 +87,8 @@ class DashboardFragment : BaseViewModelFragment<FragmentDashboardBinding, Dashbo
 
     override fun onAddMoreCityClick() {
         Timber.d("onAddMoreCityClick clicked")
+
+        searchLocationBottomSheet.show(this.parentFragmentManager, searchLocationBottomSheet.tag)
     }
 
 
